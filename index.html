@@ -321,6 +321,66 @@
     perspective:900px;
   }
   .quality-grid{ grid-template-columns:repeat(2, 1fr); }
+
+  .planning-section{
+    padding:90px 0;
+    background:linear-gradient(180deg, var(--aqua-pale) 0%, var(--ivory) 100%);
+  }
+  .planning-compare{
+    margin-top:48px;
+    max-width:900px; margin-left:auto; margin-right:auto;
+    display:grid;
+    grid-template-columns:1fr auto 1fr;
+    align-items:stretch;
+    gap:0;
+    background:#fff;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 30px 70px -30px rgba(10,42,74,0.35);
+  }
+  .planning-col{
+    padding:40px 36px;
+    position:relative;
+  }
+  .planning-icon{
+    width:40px; height:40px; border-radius:50%;
+    display:flex; align-items:center; justify-content:center;
+    background:var(--ivory);
+    margin-bottom:16px;
+  }
+  .planning-col.is-bloom .planning-icon{ background:rgba(255,255,255,0.12); }
+  .planning-col.is-bloom{
+    background:linear-gradient(160deg, var(--navy), var(--navy-soft));
+    box-shadow:inset 0 0 0 2px rgba(191,221,247,0.25);
+  }
+  .planning-label{
+    display:block;
+    font-family:'Inter',sans-serif; font-weight:700; font-size:13px;
+    letter-spacing:.06em; text-transform:uppercase;
+    color:var(--charcoal-soft);
+    margin-bottom:12px;
+  }
+  .planning-col.is-bloom .planning-label{ color:var(--aqua); font-weight:800; }
+  .planning-col p{ font-size:15px; color:var(--charcoal-soft); line-height:1.65; }
+  .planning-col.is-bloom p{ color:rgba(255,255,255,0.9); font-size:15.5px; }
+  .planning-divider{
+    display:flex; align-items:center; justify-content:center;
+    padding:0 26px;
+    background:var(--ivory);
+    position:relative; z-index:2;
+  }
+  .planning-divider span{
+    font-family:'Manrope',sans-serif; font-weight:800; font-size:13px;
+    color:#fff; letter-spacing:.05em;
+    width:38px; height:38px; border-radius:50%;
+    background:var(--bloom);
+    display:flex; align-items:center; justify-content:center;
+    box-shadow:0 10px 24px -8px rgba(47,155,224,0.6);
+  }
+  @media (max-width: 720px){
+    .planning-compare{ grid-template-columns:1fr; }
+    .planning-divider{ padding:16px 0; }
+  }
   .value-card{
     background:#fff;
     border:1px solid var(--line);
@@ -627,8 +687,8 @@
   <div class="wrap hero-inner">
     <div class="hero-copy reveal">
       <span class="eyebrow">For Licensed PH Dentists</span>
-      <h1>Engineered for <em>Superior&nbsp;Biomechanics</em></h1>
-      <p class="sub">BloomAligner's advanced force-delivery system gives your patients more predictable tooth movement than conventional aligners — backed by full clinical support and French precision manufacturing.</p>
+      <h1>Superior Biomechanics for <em>Complex&nbsp;Cases</em></h1>
+      <p class="sub">In-clinic aligner systems make simple cases look effortless, until a moderate or complex one shows up and you're left guessing why it's not tracking. BloomAligner's advanced force-delivery system is engineered for predictable tooth movement across the full range of cases, backed by concierge clinical support and French precision manufacturing.</p>
       <div class="hero-actions">
         <a href="https://form.jotform.com/261748560543058" target="_blank" rel="noopener" class="btn btn-primary">Request Onboarding Now</a>
       </div>
@@ -681,6 +741,36 @@
         </div>
         <h3>Free onboarding, always</h3>
         <p>No certification fees, no paid training course. Register, verify, and start submitting cases at zero cost, unlike most other clear aligner providers.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="planning-section">
+  <div class="wrap">
+    <div class="section-head reveal" style="text-align:center; margin-left:auto; margin-right:auto;">
+      <span class="eyebrow" style="justify-content:center;">Treatment Planning Philosophy</span>
+      <h2>Plan the whole case. Not just the next tray.</h2>
+      <p style="margin-left:auto; margin-right:auto;">How a case is planned determines how predictable it stays. Here's the difference in approach.</p>
+    </div>
+
+    <div class="planning-compare reveal">
+      <div class="planning-col">
+        <div class="planning-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#8A99A8" stroke-width="1.8"/><path d="M9.5 9.5a2.5 2.5 0 0 1 4.6-1.3c.5.8.2 1.5-.6 2.1-.8.6-1.5 1-1.5 2.2" stroke="#8A99A8" stroke-width="1.8" stroke-linecap="round"/><circle cx="12" cy="16.3" r="0.9" fill="#8A99A8"/></svg>
+        </div>
+        <span class="planning-label">Other Clear Aligner Brands</span>
+        <p>Often plan case-by-case, adjusting the approach as treatment progresses and outcomes become clearer, especially on moderate-to-complex cases.</p>
+      </div>
+      <div class="planning-divider">
+        <span>VS</span>
+      </div>
+      <div class="planning-col is-bloom">
+        <div class="planning-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" fill="#1C64C7"/><path d="M8 12.5l2.5 2.5L16 9" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <span class="planning-label">BloomAligner</span>
+        <p>Simulates and plans the full treatment arc upfront, from first tray to final retainer, before your patient's first appointment. No mid-treatment guesswork.</p>
       </div>
     </div>
   </div>
